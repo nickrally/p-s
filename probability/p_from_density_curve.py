@@ -2,7 +2,6 @@ import random
 
 PERCENT_OF_VALUES_1_SD_AWAY_FROM_MEAN  = 0.68  # 68%
 
-
 def makeRandomData(mu, sigma, population_size):
     data = []
     for x in range(population_size):
@@ -10,14 +9,13 @@ def makeRandomData(mu, sigma, population_size):
         data.append(height)
     return data
 
-
 def main():
     population_size = 10000
 
     mu    = 59
     sigma = 8
-    data = makeRandomData(mu, sigma, population_size)
     h5f7i = mu + sigma
+    data = makeRandomData(mu, sigma, population_size)
 
     # get all values one standard deviation above mean:
     above_st_div = [value for value in data if value > h5f7i]
