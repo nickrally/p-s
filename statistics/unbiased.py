@@ -2,11 +2,24 @@ import random
 import statistics
 import standard_deviation
 
+#################################################################################################
+# this script shows how closely samples deviations match a population standard deviation.
+# When sample's deviation is calculated it is using n-1 denominator to make it unbiased.
+# Example outcome:
+#
+#   Population Standard Deviation: 14.38
+#   Mean of Sample Deviations:     14.16
+#   ==============
+#   Sample Standard Deviations: [14.3, 14.27, 13.97, 14.37, 14.52, 13.38, 14.35, 14.97, 13.91, 13.55]
+#
+#
+######################################################################################################
 
-pop_size       = 1000
+
+pop_size       = 10000
 high           = 100
 low            = 50
-sample_size    = 10
+sample_size    = 100
 num_of_samples = 10
 
 def makePopulation(pop_size, high, low):
@@ -28,8 +41,7 @@ def pickUniqueIndices(size, limit):
 def makeSamples(population, sample_size, num_of_samples):
     samples = []
     for i in range(num_of_samples):
-        for i in range(num_of_samples):
-            indices = pickUniqueIndices(sample_size, len(population) - 1)
+        indices = pickUniqueIndices(sample_size, len(population) - 1)
         sample = [x for idx, x in enumerate(population) if idx in indices]
         samples.append(sample)
     return samples
@@ -64,7 +76,8 @@ def test_pickUniqueIndices():
 def test_makeSamples():
     population = makePopulation(pop_size, high, low)
     samples = makeSamples(population, sample_size, num_of_samples)
-    assert len(samples) == 10
+    assert len(samples)    == 10
+    assert len(samples[0]) == 100
 
 
 

@@ -43,9 +43,9 @@ def test_calcVariance():
 
     import interquartile_range
     p_data = [35,50,50,50,56,60,60,75,250]
-    # the data is skewed but an outlier, and measurements based on mean are not representative:
+    # the data is skewed by an outlier (250) , and measurements based on the mean are not representative:
     assert round(statistics.mean(p_data), 2) == 76.22
     assert calcStandardDeviation(p_data, True) == 62.27
-    # when the data is skewed, measures based on median are more representative:
+    # when the data is skewed, measures based on the median are more representative:
     assert round(statistics.median(p_data), 2) == 56
     assert interquartile_range.calcInterquartileRange(p_data) == 17.5
