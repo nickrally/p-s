@@ -1,5 +1,5 @@
 import random
-#whatever......
+#whatever...
 # bonko
 PERCENT_OF_VALUES_1_SD_AWAY_FROM_MEAN  = 0.68  # 68%
 
