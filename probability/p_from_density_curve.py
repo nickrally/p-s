@@ -1,6 +1,5 @@
 import random
 #whatever
-# bonko
 PERCENT_OF_VALUES_1_SD_AWAY_FROM_MEAN  = 0.68  # 68%
 
 def makeRandomData(mu, sigma, population_size):
