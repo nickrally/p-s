@@ -26,13 +26,12 @@ def draw(f, num):
        print (' '.join(map(str, row)).center(num*2)+'\n')
 
 
-num = 5
+num = 15
 
 print(pascalFunc(num))
 #print(list(pascalGen(num)))
 
 draw(pascalGen,  num)
-draw(pascalFunc, num)
-draw(pascalGen,  6)
+
 
 
