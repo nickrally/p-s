@@ -26,7 +26,7 @@ def draw(f, num):
        print (' '.join(map(str, row)).center(num*2)+'\n')
 
 
-num = 10
+num = 15
 
 print(pascalFunc(num))
 #print(list(pascalGen(num)))
